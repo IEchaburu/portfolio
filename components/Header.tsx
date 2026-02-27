@@ -13,8 +13,37 @@ const navLinks = [
 
 const SCROLL_THRESHOLD = 10;
 
-export function Header() {
+function DarkModeToggle() {
   const { darkMode, toggleDarkMode } = useTheme();
+
+  return (
+    <div className="flex items-center gap-3">
+      <span className="font-mono uppercase text-xs sm:text-sm hidden sm:inline">
+        DARK MODE
+      </span>
+      <button
+        onClick={toggleDarkMode}
+        className="relative w-16 h-8 sm:w-20 sm:h-10 border-[3px] border-border-brutal bg-background"
+        style={{
+          boxShadow: darkMode
+            ? "-4px -4px 0 0 #fff"
+            : "4px 4px 0 0 #000",
+        }}
+        aria-label="Toggle dark mode"
+      >
+        <div
+          className="absolute top-0 h-full w-1/2 bg-gold border-[3px] border-border-brutal transition-transform duration-300"
+          style={{
+            transform: darkMode ? "translateX(100%)" : "translateX(0)",
+            boxShadow: "2px 2px 0 0 rgba(0,0,0,0.3)",
+          }}
+        />
+      </button>
+    </div>
+  );
+}
+
+export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const lastScrollY = useRef(0);
@@ -71,7 +100,7 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Desktop nav */}
+        {/* Desktop: nav links on the left */}
         <nav className="hidden md:flex gap-8">
           {navLinks.map((link) => (
             <a
@@ -85,7 +114,12 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile: dark mode on the left (secondary) */}
+        <div className="md:hidden">
+          <DarkModeToggle />
+        </div>
+
+        {/* Mobile: hamburger on the right (primary, thumb-reachable) */}
         <button
           onClick={() => setMenuOpen((o) => !o)}
           className="md:hidden border-[3px] border-border-brutal p-2 hover:bg-gold transition-colors"
@@ -94,29 +128,9 @@ export function Header() {
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
-        {/* Dark mode toggle */}
-        <div className="flex items-center gap-3">
-          <span className="font-mono uppercase text-xs sm:text-sm hidden sm:inline">
-            DARK MODE
-          </span>
-          <button
-            onClick={toggleDarkMode}
-            className="relative w-16 h-8 sm:w-20 sm:h-10 border-[3px] border-border-brutal bg-background"
-            style={{
-              boxShadow: darkMode
-                ? "-4px -4px 0 0 #fff"
-                : "4px 4px 0 0 #000",
-            }}
-            aria-label="Toggle dark mode"
-          >
-            <div
-              className="absolute top-0 h-full w-1/2 bg-gold border-[3px] border-border-brutal transition-transform duration-300"
-              style={{
-                transform: darkMode ? "translateX(100%)" : "translateX(0)",
-                boxShadow: "2px 2px 0 0 rgba(0,0,0,0.3)",
-              }}
-            />
-          </button>
+        {/* Desktop: dark mode on the right */}
+        <div className="hidden md:block">
+          <DarkModeToggle />
         </div>
       </div>
 
