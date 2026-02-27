@@ -10,22 +10,22 @@ export const contactCards: ContactCard[] = [
   {
     label: "PRIMARY CHANNEL",
     icon: "mail",
-    content: "developer@example.com",
-    link: "mailto:developer@example.com",
+    content: "inaki.echaburu@gmail.com",
+    link: "mailto:inaki.echaburu@gmail.com",
     inverted: false,
   },
   {
     label: "CODE REPOSITORY",
     icon: "github",
-    content: "github.com/username",
-    link: "https://github.com/username",
+    content: "github.com/IEchaburu",
+    link: "https://github.com/IEchaburu",
     inverted: false,
   },
   {
     label: "PROFESSIONAL NETWORK",
     icon: "linkedin",
-    content: "linkedin.com/in/username",
-    link: "https://linkedin.com/in/username",
+    content: "linkedin.com/in/inakiechaburu/",
+    link: "https://linkedin.com/in/inakiechaburu",
     inverted: false,
   },
   {

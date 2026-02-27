@@ -15,12 +15,12 @@ export default function Home() {
 
       <section
         id="work"
-        className="max-w-7xl mx-auto px-6 py-20 border-t-[3px] border-border-brutal"
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 border-t-[3px] border-border-brutal"
       >
-        <h2 className="font-mono text-4xl uppercase mb-12">
+        <h2 className="font-mono text-2xl sm:text-3xl md:text-4xl uppercase mb-8 md:mb-12">
           CASE STUDIES / DEEP DIVE
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
