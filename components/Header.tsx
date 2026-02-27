@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { useTheme } from "@/components/theme/ThemeProvider";
 
@@ -11,12 +11,65 @@ const navLinks = [
   { href: "#contact", label: "CONTACT" },
 ];
 
+const SCROLL_THRESHOLD = 10;
+
 export function Header() {
   const { darkMode, toggleDarkMode } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (ticking.current) return;
+      ticking.current = true;
+
+      requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastScrollY.current;
+
+        if (currentY < 50) {
+          setVisible(true);
+        } else if (delta > SCROLL_THRESHOLD) {
+          setVisible(false);
+          setMenuOpen(false);
+        } else if (delta < -SCROLL_THRESHOLD) {
+          setVisible(true);
+        }
+
+        lastScrollY.current = currentY;
+        ticking.current = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      setMenuOpen(false);
+
+      const headerHeight = 80;
+      const top =
+        target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+      window.scrollTo({ top, behavior: "smooth" });
+    },
+    [],
+  );
 
   return (
-    <header className="border-b-[3px] border-border-brutal bg-background p-4 md:p-6 sticky top-0 z-50">
+    <header
+      className={`border-b-[3px] border-border-brutal bg-background p-4 md:p-6 sticky top-0 z-50 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-8">
@@ -24,6 +77,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="font-mono uppercase tracking-wider hover:bg-gold px-2 py-1 transition-colors border-[3px] border-transparent hover:border-border-brutal"
             >
               {link.label}
@@ -73,7 +127,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="font-mono uppercase tracking-wider hover:bg-gold px-3 py-2 transition-colors border-[3px] border-transparent hover:border-border-brutal"
             >
               {link.label}
