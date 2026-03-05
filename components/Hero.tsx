@@ -8,8 +8,10 @@ export function Hero() {
       e.preventDefault();
       const target = document.querySelector("#contact");
       if (!target) return;
+      const isMobile = window.innerWidth < 768;
+      const headerHeight = isMobile ? 100 : 30;
       const top =
-        target.getBoundingClientRect().top + window.scrollY - 80;
+        target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top, behavior: "smooth" });
     },
     [],
