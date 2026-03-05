@@ -62,7 +62,6 @@ export function Header() {
           setVisible(true);
         } else if (delta > SCROLL_THRESHOLD) {
           setVisible(false);
-          console.log("menuOpen", menuOpen);
           setMenuOpen(false);
         } else if (delta < -SCROLL_THRESHOLD) {
           setVisible(true);
@@ -86,7 +85,7 @@ export function Header() {
       setMenuOpen(false);
 
       const isMobile = window.innerWidth < 768;
-      const headerHeight = isMobile ? 100 : 30;
+      const headerHeight = isMobile ? 260 : 30;
       const top =
         target.getBoundingClientRect().top + window.scrollY - headerHeight;
 
