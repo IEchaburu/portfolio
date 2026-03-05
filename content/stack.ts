@@ -6,24 +6,21 @@ export interface SkillCategory {
 export const categories: SkillCategory[] = [
   {
     title: "BACKEND",
-    skills: ["Node.js", "Python", "Go", "NestJS", "FastAPI", "Express"],
+    skills: ["Node.js", "Python", "NestJS", "FastAPI", "Express"],
   },
   {
     title: "FRONTEND",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind", "Vite", "Vue"],
+    skills: ["React", "Next.js", "TypeScript", "Tailwind", "Redux", "Zod"],
   },
   {
     title: "DEVOPS",
-    skills: ["Docker", "Kubernetes", "AWS", "GCP", "Terraform", "CI/CD"],
+    skills: ["Docker", "S3", "Linux", "CI/CD", "Grafana"],
   },
   {
     title: "AI/ML",
     skills: [
-      "TensorFlow",
-      "PyTorch",
       "LangChain",
       "OpenAI",
-      "Pinecone",
       "RAG Systems",
     ],
   },
@@ -33,20 +30,15 @@ export const categories: SkillCategory[] = [
       "Microservices",
       "Event-Driven",
       "CQRS",
-      "DDD",
-      "REST/GraphQL",
-      "Serverless",
+      "REST",
     ],
   },
   {
     title: "DATABASES",
     skills: [
       "PostgreSQL",
-      "MongoDB",
+      "MySQL",
       "Redis",
-      "Neo4j",
-      "ClickHouse",
-      "Supabase",
     ],
   },
 ];
