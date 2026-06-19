@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const categories: SkillCategory[] = [
   {
     title: "BACKEND",
-    skills: ["Node.js", "Python", "NestJS", "FastAPI", "Express"],
+    skills: ["Node.js", "Python", "NestJS", "Express"],
   },
   {
     title: "FRONTEND",
@@ -14,7 +14,7 @@ export const categories: SkillCategory[] = [
   },
   {
     title: "DEVOPS",
-    skills: ["Docker", "S3", "Linux", "CI/CD", "Grafana"],
+    skills: ["Docker", "S3", "Linux", "Grafana"],
   },
   {
     title: "AI/ML",
@@ -27,10 +27,10 @@ export const categories: SkillCategory[] = [
   {
     title: "ARCHITECTURE",
     skills: [
-      "Microservices",
       "Event-Driven",
       "CQRS",
       "REST",
+      "Domain Driven Design (in progress)",
     ],
   },
   {
