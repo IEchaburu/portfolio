@@ -32,7 +32,7 @@ export const contactCards: ContactCard[] = [
     label: "CREDENTIALS",
     icon: "download",
     content: "[ DOWNLOAD FULL RESUME ]",
-    link: "#",
+    link: "/inaki_echaburu_dutren_cv.pdf",
     inverted: true,
   },
 ];

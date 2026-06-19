@@ -27,7 +27,7 @@ export function Hero() {
         </h1>
 
         <p className="font-mono text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-2xl">
-          Software Developer specializing in distributed systems, event-driven
+          Software Developer specializing in systems with high business logic complexity, learning about event-driven
           architecture, and integrating AI into production-grade applications.
         </p>
 

@@ -16,7 +16,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Real-Time Event Pipeline",
+    title: "Willow Stock Management System",
     imageUrls: [
       "/Captura%20de%20pantalla%202025-10-17%20163335.png",
       "/image.png",
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "AI-Powered Data Pipeline",
+    title: "Customer Support AI Assistant",
     imageUrls: [
       "/rag.png",
     ],
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     githubUrl: "#",
   },
   {
-    title: "RAG Knowledge System",
+    title: "BuyIN Portfolio",
     imageUrls: [
       "/buyin.png",
     ],
