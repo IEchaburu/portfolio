@@ -7,7 +7,7 @@ export interface STARMethod {
 
 export interface Project {
   title: string;
-  imageUrl: string;
+  imageUrls: string[];
   star: STARMethod;
   techStack: string[];
   liveUrl?: string;
@@ -17,8 +17,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Real-Time Event Pipeline",
-    imageUrl:
-      "https://images.unsplash.com/photo-1602634630420-30a51ffa9326?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWNrZW5kJTIwYXJjaGl0ZWN0dXJlJTIwZGlhZ3JhbSUyMGRhcmt8ZW58MXx8fHwxNzcwOTM3MDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    imageUrls: [
+      "/Captura%20de%20pantalla%202025-10-17%20163335.png",
+      "/image.png",
+    ],
     star: {
       situation:
         "E-commerce platform struggled with processing 500K+ daily orders, causing checkout delays and inventory sync issues.",
@@ -34,8 +36,9 @@ export const projects: Project[] = [
   },
   {
     title: "AI-Powered Data Pipeline",
-    imageUrl:
+    imageUrls: [
       "https://images.unsplash.com/photo-1635145613344-3e59b1e8afd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwcGlwZWxpbmUlMjBpbmZyYXN0cnVjdHVyZSUyMGNvZGV8ZW58MXx8fHwxNzcwOTM3MDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    ],
     star: {
       situation:
         "SaaS company needed to extract structured data from 100K+ unstructured customer support tickets monthly.",
@@ -51,8 +54,9 @@ export const projects: Project[] = [
   },
   {
     title: "RAG Knowledge System",
-    imageUrl:
+    imageUrls: [
       "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMG5ldXJhbCUyMG5ldHdvcmslMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MDgzMjEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    ],
     star: {
       situation:
         "Internal documentation across 12 repos was fragmented, making onboarding new engineers a 3-month process.",
@@ -68,8 +72,9 @@ export const projects: Project[] = [
   },
   {
     title: "Microservices Orchestration",
-    imageUrl:
+    imageUrls: [
       "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3NlcnZpY2VzJTIwc3lzdGVtJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3MDkzNzAzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    ],
     star: {
       situation:
         "Monolithic payment system couldn't scale during Black Friday, leading to $200K in lost revenue and customer churn.",

@@ -1,18 +1,12 @@
-import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import type { Project } from "@/content/projects";
+import { ProjectImageCarousel } from "@/components/ProjectImageCarousel";
 
-export function ProjectCard({ title, imageUrl, star, techStack, liveUrl, githubUrl }: Project) {
+export function ProjectCard({ title, imageUrls, star, techStack, liveUrl, githubUrl }: Project) {
   return (
     <div className="border-[3px] border-border-brutal bg-background shadow-[6px_6px_0_0_var(--shadow-color)]">
       <div className="border-b-[3px] border-border-brutal relative h-48 sm:h-64">
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
+        <ProjectImageCarousel images={imageUrls} alt={title} />
       </div>
 
       <div className="p-4 sm:p-6">
