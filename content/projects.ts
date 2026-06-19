@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     title: "AI-Powered Data Pipeline",
     imageUrls: [
-      "https://images.unsplash.com/photo-1635145613344-3e59b1e8afd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwcGlwZWxpbmUlMjBpbmZyYXN0cnVjdHVyZSUyMGNvZGV8ZW58MXx8fHwxNzcwOTM3MDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "/rag.png",
     ],
     star: {
       situation:
@@ -55,7 +55,7 @@ export const projects: Project[] = [
   {
     title: "RAG Knowledge System",
     imageUrls: [
-      "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMG5ldXJhbCUyMG5ldHdvcmslMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MDgzMjEwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "/buyin.png",
     ],
     star: {
       situation:
@@ -67,24 +67,6 @@ export const projects: Project[] = [
         "Reduced avg. onboarding time to 3 weeks, 89% answer accuracy rate, 2,500+ queries/month, and 94% developer satisfaction score.",
     },
     techStack: ["LangChain", "ChromaDB", "OpenAI", "Next.js", "Vercel"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Microservices Orchestration",
-    imageUrls: [
-      "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb3NlcnZpY2VzJTIwc3lzdGVtJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3MDkzNzAzNXww&ixlib=rb-4.1.0&q=80&w=1080",
-    ],
-    star: {
-      situation:
-        "Monolithic payment system couldn't scale during Black Friday, leading to $200K in lost revenue and customer churn.",
-      task: "Decompose the monolith into microservices while maintaining zero-downtime migration and data consistency.",
-      action:
-        "Applied strangler fig pattern, extracted payment, fraud detection, and notification services. Implemented saga pattern for distributed transactions, used Istio for service mesh, and built comprehensive observability with Datadog.",
-      result:
-        "Handled 10x Black Friday traffic (150K concurrent users), reduced deployment time from 2hrs to 15min, and achieved 99.95% uptime SLA.",
-    },
-    techStack: ["Go", "gRPC", "Istio", "PostgreSQL", "Terraform", "AWS EKS"],
     liveUrl: "#",
     githubUrl: "#",
   },
