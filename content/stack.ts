@@ -19,7 +19,7 @@ export const categories: SkillCategory[] = [
   {
     title: "AI/ML",
     skills: [
-      "LangChain",
+      "Vercel SDK",
       "OpenAI",
       "RAG Systems",
     ],
@@ -27,10 +27,9 @@ export const categories: SkillCategory[] = [
   {
     title: "ARCHITECTURE",
     skills: [
-      "Event-Driven",
-      "CQRS",
       "REST",
-      "Domain Driven Design (in progress)",
+      "DDD",
+      "Event-Driven (In progress)",
     ],
   },
   {
