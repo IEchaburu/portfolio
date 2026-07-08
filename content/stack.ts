@@ -28,7 +28,7 @@ export const categories: SkillCategory[] = [
     title: "ARCHITECTURE",
     skills: [
       "REST",
-      "DDD",
+      "Domain Driven Design",
       "Event-Driven (In progress)",
     ],
   },

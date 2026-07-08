@@ -23,11 +23,11 @@ export const projects: Project[] = [
     sections: [
       {
         label: "Problem",
-        body: "E-commerce retailers selling across multiple channels constantly fight stock drift: overselling, manual re-counts, and no single source of truth. A co-founder surfaced this pain from the industry, and we built Willow to automate cross-channel inventory sync, product tracking, and sales insights.",
+        body: "E-commerce retailers selling across multiple channels constantly fight stock drift: overselling, manual re counts, and no single source of truth. A co-founder surfaced this pain from the industry, and we built Willow to automate cross channel inventory sync, product tracking, and sales insights.",
       },
       {
         label: "Approach",
-        body: "As one of three founders and a core engineer, I owned the reliability of the sync engine. The hard part was keeping stock consistent across integrations with Mercado Libre, Tiendanube, and Shopify while sales and inventory updates happened concurrently — reconciling conflicting counts, respecting each channel's API rate limits, and surviving partial failures without ever interrupting live selling. Built on NestJS with MySQL and Redis, containerized with Docker, and instrumented with Grafana for observability into the sync pipeline.",
+        body: "As one of the three founders and software developer, I owned the reliability of the sync engine. The hard part was keeping stock consistent across integrations with Mercado Libre, Tiendanube, and Shopify while sales and inventory updates happened concurrently: reconciling conflicting counts, respecting each channel's API rate limits, and surviving partial failures without ever interrupting live selling.",
       },
       {
         label: "Outcome",
@@ -46,15 +46,15 @@ export const projects: Project[] = [
     sections: [
       {
         label: "Problem",
-        body: "A tech store's staff were drowning in inbound WhatsApp messages — support questions, product queries, price checks — most of which never converted to a sale, pulling them away from the conversations that actually would.",
+        body: "A tech store's staff were drowning in inbound WhatsApp messages: support questions, product queries, price checks; most of which never converted to a sale, pulling them away from the conversations that actually would.",
       },
       {
         label: "Approach",
-        body: "Building it with my brother, I made a WhatsApp AI assistant that handled the high-volume support automatically and classified each conversation, surfacing insights on what customers asked and where demand was trending. When it detected a genuine buying signal, it handed off to a human to close the sale. Answers were grounded in the store's real catalog via a vector database, so the assistant stayed accurate. Orchestrated with n8n, wired to Supabase (including the vector store) and Google Sheets for data, and powered by the Gemini API.",
+        body: "Building it with my brother, I made a WhatsApp AI assistant that handled the high-volume support automatically and classified each conversation, surfacing insights on what customers asked and where demand was trending. When it detected a genuine buying signal, it handed off to a human to close the sale. Answers were grounded in the store's real catalog via a vector database, so the assistant stayed accurate.",
       },
       {
         label: "Outcome",
-        body: "In a live trial it handled real customer messages and escalated genuine leads to staff correctly — the system worked. The store didn't adopt it long-term, but the design became the blueprint for the AI assistant I later built for BuyIN, which is live today.",
+        body: "In a live trial it handled real customer messages and escalated genuine leads to staff correctly: the system worked. The store didn't adopt it long term, but the design became the blueprint for the AI assistant I later built for BUYIN, which is live today.",
         emphasis: true,
       },
     ],
@@ -68,11 +68,11 @@ export const projects: Project[] = [
     sections: [
       {
         label: "Problem",
-        body: "BuyIN is a curated portfolio for luxury pre-development real-estate brokers — the bridge between developers and buyers — covering high-end markets in Punta del Este, Miami, and Buenos Aires. They needed a branded showcase for their available developments and a way to turn visitors into qualified leads, as the first step toward scaling into a full marketplace.",
+        body: "BUYIN is a curated portfolio for luxury pre-development real estate brokers,  the bridge between developers and buyers. Covering high end markets in Punta del Este, Miami, and Buenos Aires. They needed a branded showcase for their available developments and a way to turn visitors into qualified leads, as the first step toward scaling into a full marketplace.",
       },
       {
         label: "Approach",
-        body: "I built the site and an integrated AI assistant that answers detailed questions about each development and, via a purpose-built system prompt, naturally captures visitor information and qualifies them as sales leads. It's the productionized evolution of the WhatsApp assistant I prototyped for the tech store — the same lead-capture idea, rebuilt for the web. Next.js and PostgreSQL, with the assistant powered by the Vercel AI SDK, deployed on Vercel.",
+        body: "I built the site and an integrated AI assistant that answers detailed questions about each development and, via a purpose-built system prompt, naturally captures visitor information and qualifies them as sales leads. It's the productionized evolution of the WhatsApp assistant I prototyped for the tech store, the same 'lead capture' idea, rebuilt for the web.",
       },
       {
         label: "Outcome",
